@@ -11,9 +11,7 @@ public class FileManagement {
         FileOutputStream outputStream;
         
         try {
-            if fileExists() {
-                deleteFile();
-            }
+            deleteFile();
             
             outputStream = openFileOutput(FILENAME, Context.MODE_PRIVATE);
             outputStream.write(data.getBytes());
@@ -23,14 +21,18 @@ public class FileManagement {
         }
     }
     
-    public static void openFile() {
+    private File getFile() {
+        File myFile = new File(context.getFilesDir(), FILENAME);
+        return myFile;
     }
     
     public static void deleteFile() {
+        if fileExists() {
+            getFile().delete();
+        }
     }
     
     private boolean fileExists() {
-        File myFile = newFile(context.getFilesDir(), FILENAME);
-        return myFile.exists();
+        return getFile().exists();
     }
 }
