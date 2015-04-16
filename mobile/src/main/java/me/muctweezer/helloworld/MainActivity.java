@@ -38,6 +38,6 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     public void onClick(View view) {
-        Toast.makeText(this, "You did it!",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.button_response,Toast.LENGTH_LONG).show();
     }
 }
