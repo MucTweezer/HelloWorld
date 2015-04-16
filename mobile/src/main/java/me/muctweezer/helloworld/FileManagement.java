@@ -5,7 +5,7 @@
  * All data would be stored in the single file, which would be recreated upon each save (not appended).
  */
  
-package me.muctweezer.helloworld
+package me.muctweezer.helloworld;
 
 import java.io.*;
 
