@@ -11,17 +11,18 @@ import java.io.*;
 
 private static final String FILENAME = "temp.txt";
 
+private String myData = "oh my gosh";
+
 public class FileManagement {
 
     public static void saveFile() {
-        String data = "Oh my gosh.";
         FileOutputStream outputStream;
         
         try {
             deleteFile();
             
             outputStream = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-            outputStream.write(data.getBytes());
+            outputStream.write(myData.getBytes());
             outputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -41,5 +42,12 @@ public class FileManagement {
     
     private boolean fileExists() {
         return getFile().exists();
+    }
+    
+    public String getData() {
+        return myData;
+    }
+    public void setData(String tempString) {
+    				myData = tempString;
     }
 }
