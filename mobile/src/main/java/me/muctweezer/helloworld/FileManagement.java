@@ -48,6 +48,6 @@ public class FileManagement {
         return myData;
     }
     public void setData(String tempString) {
-    				myData = tempString;
+        myData = tempString;
     }
 }
