@@ -30,5 +30,7 @@ public class FileManagement {
     }
     
     private boolean fileExists() {
+        File myFile = newFile(context.getFilesDir(), FILENAME);
+        return myFile.exists();
     }
 }
