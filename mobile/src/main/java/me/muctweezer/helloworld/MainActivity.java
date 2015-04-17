@@ -49,4 +49,19 @@ public class MainActivity extends ActionBarActivity {
         myFileManager.deleteFile();
         Toast.makeText(this, R.string.button_response, Toast.LENGTH_LONG).show();
     }
+    public void onButtonClick(View view) {
+        switch(view.getId()) {
+            case R.id.button:
+                myFileManager.saveFile();
+                Toast.makeText(this, R.string.button_response, Toast.LENGTH_LONG).show());
+                break;
+            case R.id.button2:
+                myFileManager.deleteFile();
+                Toast.makeText(this, R.string.button_response, Toast.LENGTH_LONG).show());
+                break;
+            case default:
+                //that wasn't a button
+                break;
+        }
+    }
 }
