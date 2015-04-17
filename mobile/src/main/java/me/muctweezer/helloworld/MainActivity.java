@@ -42,6 +42,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     public void onClick(View view) {
+        myFileManager.saveFile();
         Toast.makeText(this, R.string.button_response,Toast.LENGTH_LONG).show();
     }
 }
