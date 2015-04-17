@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
                 myFileManager.deleteFile();
                 Toast.makeText(this, R.string.button_response, Toast.LENGTH_LONG).show();
                 break;
-            case default:
+            default:
                 //that wasn't a button
                 break;
         }
