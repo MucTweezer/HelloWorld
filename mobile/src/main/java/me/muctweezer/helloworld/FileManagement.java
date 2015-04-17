@@ -14,13 +14,14 @@ import java.io.*;
 
 public class FileManagement {
     private final String FILENAME = "temp.txt";
-    private String myData = "oh my gosh";
+    private String myData;
     private Context myContext;
     private File myFile;
 
     public FileManagement(Context tempContext) {
         myContext = tempContext;
         myFile = new File(myContext.getFilesDir(), FILENAME);
+        myData = "oh my gosh";
     }
 
     public void saveFile() {
