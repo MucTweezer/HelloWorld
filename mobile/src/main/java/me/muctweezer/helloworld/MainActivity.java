@@ -43,6 +43,10 @@ public class MainActivity extends ActionBarActivity {
     }
     public void onClick(View view) {
         myFileManager.saveFile();
-        Toast.makeText(this, R.string.button_response,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.button_response, Toast.LENGTH_LONG).show();
+    }
+    public void onClickTwo(View view) {
+        myFileManager.deleteFile();
+        Toast.makeText(this, R.string.button_response, Toast.LENGTH_LONG).show();
     }
 }
