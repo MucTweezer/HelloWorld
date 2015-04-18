@@ -37,6 +37,24 @@ public class FileManagement {
             e.printStackTrace();
         }
     }
+
+    public void readFile() {
+        FileInputStream inputStream = null;
+        StringBuilder sBuilder = new StringBuilder();
+
+        try {
+            inputStream = myContext.openFileInput(FILENAME);
+
+            int content;
+            while((content = inputStream.read()) != -1) {
+                sBuilder.append((char)content);
+            }
+
+            myData = sBuilder.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     
     private File getFile() {
         File myFile = new File(myContext.getFilesDir(), FILENAME);
