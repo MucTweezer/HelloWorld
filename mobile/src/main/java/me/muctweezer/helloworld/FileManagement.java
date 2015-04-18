@@ -21,7 +21,7 @@ public class FileManagement {
     public FileManagement(Context tempContext) {
         myContext = tempContext;
         myFile = new File(myContext.getFilesDir(), FILENAME);
-        myData = "oh my gosh";
+        myData = "oh my gosh\n";
     }
 
     public void saveFile() {
